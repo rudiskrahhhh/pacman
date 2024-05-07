@@ -128,6 +128,11 @@ while running:
     for dot in dots_to_remove:
         dots.remove(dot)
 
+    # Check if all dots are collected
+    if len(dots) == 0:
+        print("Game finished!")
+        running = False
+
     pygame.display.flip()
 
     # Limit frame rate
